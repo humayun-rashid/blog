@@ -1,0 +1,116 @@
+Probably you have heard about it a lot and you still don't have a clear idea of what is RESTful API, what it does and how to create one! Don't worry. I was in the same situation for a longer time than you think and it took quite some time to learn it!
+The best way to learn about RESTful API is to learn by doing. Trust me! You will learn a lot if you just start creating one and I can promise you that no other stack except NodeJs and Express will help you to get started! 
+
+But wait a minute! You don't know anything about NodeJS, along with Express and even JS. Now what?
+
+Just don't worry and seat tight. This is going to be a several parts articles that will help you to get to know about RESTful API design and by the end of this series, you may not be a professional developer but still, you will learn a lot of good stuff.
+
+Let's get started with a little bit description of RESTful API! Here it goes!
+
+## What is RESTful API 
+
+RESTful API is a client-server based architecture that utilizes stateless operations to access and manipulate data through HTTP requests. REST stands for REpresentational State Transfer. One of the principal requirements of a Restful architecture is that it consists of two core elements, client and server. Clients request resources from the server to do different operations. RESTful API based system is stateless as each request from the client to server must contain all of the information that is essential to understand the request, and cannot take advantage of any stored context on the server. REST API is designed to create an endpoint for specific operations using HTTP protocol and CRUD functionality (CRUD stands for Create, Read, Update, Delete). HTTP defines a set of request methods to indicate the desired action to be performed for a given resource based on CRUD functionality. The HTTP protocols that are used for designing REST API are listed below. 
+
+* POST - create a resource or generally provide data
+* GET - retrieve an index of resources or an individual resource
+* PUT - create or replace a resource 
+* PATCH - update/modify a resource 
+* DELETE - remove a resource
+
+Enough of talking! Let's get started with hands-on.
+
+# RESTful API development by Node.Js and Express: Setup and configure the development environment
+
+To getting started with reSTful API development, first, we need to create a development environment. The following things are needed to be installed configured before the jump to coding. We will only use stacks that are open source and free to use.
+
+* Programming Stack and package manager -NodeJS & NPM
+* Source code editor - Visual Studio Code / WebStorm (Editor)
+* REST API Testing Tools - POSTMAN / Insomonia
+* Version Control - Github 
+ 
+## NodeJs and NPM
+NodeJS is a Chrome’s V8 JavaScript engine based runtime that is open-source, lightweight, efficient server and vastly used for developing a client-server based application. Performance of NodeJs is non-blocking and asynchronous and it is an event-driven based runtime environment. The official package manager for Node is NPM.
+
+### Windows ( as well as MAC )
+Download the required installer from the following link, install Node by double-clicking on the downloaded file and following the installation prompts.
+```
+Go to https://nodejs.org/en/
+```
+### Install Node via Homebrew ( MAC and Linux) 
+Homebrew simplifies the installation of software on the Mac OS X operating system. Install Homebrew for MAC or Linux using the following command :
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+or
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
+```
+In the terminal type the following command to install Node.
+```
+brew install node
+```
+If everything installed successfully then you can type in the following command in the terminal to check the Node and NPM version.
+```
+node -v
+npm -v
+```
+### Ubuntu 18.04 (Install from Ubuntu binary distributions repository )
+The easiest way to install the most recent LTS version of Node 10.x is to use the package manager to get it from the Ubuntu binary distributions repository. This can be done very simply by running the following two commands on the terminal:
+```
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - 
+sudo apt-get install -y nodejs
+```
+## Install Source code editor ( Visual Studio Code) 
+Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux, and macOS.It is a simple yet powerful and fast source code editor with support for hundreds of languages with features like syntax highlighting, bracket-matching, auto-indentation, box-selection, snippets, intuitive keyboard shortcuts, easy customization, and community-contributed keyboard shortcut mappings and many more.  You can get started with visual studio code by downloading from the following links. It is important that turn on the autosave mode.
+
+Linux : https://code.visualstudio.com/docs/setup/linux
+MacOS : https://code.visualstudio.com/docs/setup/mac
+Windows : https://code.visualstudio.com/docs/setup/windows
+
+You need to install a plugin that will make your coding experience more fun. The plugin's name is Prettier, that's a tool that automatically covert messy code into a readable format. Install it from here: 
+```
+https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+```
+
+## RESTful API testing tools
+### Install Postman
+Postman is a collaboration platform for API development. We will use to test our endpoints that will be created during creating RESTful API. POSTMAN can be downloaded and install for Windows and MAC from here:
+```
+https://www.postman.com/downloads/
+```
+Postman is also available from google chrome store that can be used as Chrome extension : 
+```
+https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=fi
+```
+### Install Insomnia
+Another famous tool for API testing is Insomnia. It is a free cross-platform desktop for interacting with HTTP-based APIs. Download insomnia from here:
+```
+https://support.insomnia.rest/article/11-getting-started
+```
+
+## Setup Github
+GitHub is an open-source repository hosting service with features of tracking changes in a changelog so that you can know exactly what has been changed in your code each time.
+
+### Linux
+Open a terminal window. Copy & paste the following into the terminal window and hit Return. You may be prompted to enter your password.
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install git
+```
+### Mac
+Copy & paste the following into the terminal window and hit Return.
+```
+brew install git
+```
+You can use Git now.
+
+##### Windows 
+```
+https://gitforwindows.org/
+```
+If you are new to Git, I will suggest you read: https://kbroman.org/github_tutorial/pages/first_time.html
+You will eventually get a bit more understanding about configuring GitHub for the first time.
+
+Enough of talking about setting up the environment. It is now time to start development. The second part of this article will guide you on how you can start coding to make your first API using nodejs and express.
